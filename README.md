@@ -1,6 +1,6 @@
 # rails-react-devise-boilerplate
 
-This is a basic boilerplate for a Rails project with user authentication.
+This is a basic boilerplate for a Rails project with user registration.
 
 ## Ingredients
 
