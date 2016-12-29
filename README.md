@@ -13,8 +13,8 @@ This is a basic boilerplate for a Rails project with user authentication.
 
 
 ## Installation
-[Install rails-react-devise-boilerplate](./INSTALL)
+[Install rails-react-devise-boilerplate](./INSTALL.md)
 
 
 ## Testing
-[Testing rails-react-devise-boilerplate](./TESTING)
+[Testing rails-react-devise-boilerplate](./TESTING.md)
