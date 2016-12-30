@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="/">NewApp</a>
     <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>
-      <li><p class="navbar-text"><%= current_user.email %></p></li>
+      <li><%= link_to(avatar_for(current_user, size: 22) + ' ' + current_user.username, current_user) %></li>
       <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
     <% else %>
       <li><%= link_to "Sign in / Sign up", new_user_session_path %></li>
