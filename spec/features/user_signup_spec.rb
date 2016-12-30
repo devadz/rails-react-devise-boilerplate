@@ -9,7 +9,7 @@ RSpec.describe "User singing up" do
     fill_in "Password confirmation", with: "123456password"
     click_on "Sign up"
 
-    expect(page).to have_content "example@gmail.com"
+    expect(page).to have_content "exampleuser"
   end
 
 

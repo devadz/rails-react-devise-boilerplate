@@ -10,6 +10,8 @@ This is a basic boilerplate for a Rails project with user registration.
 * Twitter bootstrap SCSS framework (v3.3.7)
 * Font awesome (4.7.0)
 * Devise gem for user registration
+* React for Rails
+* Carrierwave and MiniMagick for User avatar
 
 
 ## Installation
@@ -18,3 +20,11 @@ This is a basic boilerplate for a Rails project with user registration.
 
 ## Testing
 [Testing rails-react-devise-boilerplate](./TESTING.md)
+
+
+## Create React components
+I prefer using the Component generator offered by react-rails with es6 syntax option:
+```
+rails generate react:component Label --es6
+```
+For more information take a look at the [react-rails github repository](https://github.com/reactjs/react-rails)

@@ -10,7 +10,7 @@ RSpec.describe "User singing in" do
   scenario "successfully" do
     sign_in @user
 
-    expect(page).to have_content @user.email
+    expect(page).to have_content @user.username
   end
 
 
@@ -20,7 +20,7 @@ RSpec.describe "User singing in" do
     fill_in "Password", with: "wrongpassword"
     click_on "Log in"
 
-    expect(page).not_to have_content @user.email
+    expect(page).not_to have_content @user.username
   end
 
 end
