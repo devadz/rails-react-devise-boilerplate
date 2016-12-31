@@ -18,13 +18,6 @@
     rake db:create
     ```
 
-4. Edit configuration files for devise gem:
-
-    **config/environments/development.rb** and **config/environments/production.rb**
-
-    Set up config.action_mailer.default_url_options host and port
-    (For development host is 'localhost' and port is '3000')
-
 ---
 
 ## Migrate database
@@ -48,7 +41,7 @@ Open **/config/application.yml** and insert the following lines:
 mail_host: "localhost"
 mail_port: "3000"
 ```
-
+These will be used for the config.action_mailer.default_url_options.
 
 ### Configure OAuth
 
