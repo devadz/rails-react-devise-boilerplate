@@ -77,9 +77,9 @@ If you need more user data, check the Facebook documentation at:  https://develo
 
 If you want to remove OAuth support, you have to modify just a few files:
 **config/initializers/devise.rb**
-Comment out this lines:
+Comment out or remove these lines:
 ```
-config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"], scope: 'email', info_fields: 'email, name'
+config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"], { secure_image_url: 'true', image_size: 'square', scope: 'email', info_fields: 'email, name, picture' }
 
 config.omniauth :google_oauth2, ENV["google_app_id"], ENV["google_app_secret"], :strategy_class => OmniAuth::Strategies::GoogleOauth2, skip_jwt: "true"
 ```
