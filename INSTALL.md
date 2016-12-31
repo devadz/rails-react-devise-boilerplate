@@ -36,7 +36,21 @@ rake db:migrate
 
 ---
 
-## Configure OAuth
+## Configuration
+
+With Figaro gem configuration is very comfortable.
+First create a new YAML file: **/config/application.yml**
+
+### Configure Mailing
+
+Open **/config/application.yml** and insert the following lines:
+```
+mail_host: "localhost"
+mail_port: "3000"
+```
+
+
+### Configure OAuth
 
 With OAuth you can allow users to sign up with their social accounts.
 Out of the box this boilerplate supports:
@@ -47,11 +61,7 @@ To use this, you'll have to create an App first, here are good tutorials:
 [Create Facebook App](https://developers.facebook.com/docs/apps/register#create-app)
 [Create Google+ App](http://wpweb.co.in/documents/social-network-integration/google/)
 
-
-#### Create config file
-
-To use OAuth you have to add ID and Secret for each app to **/config/application.yml**.
-Create that file with the following content and paste in your created App IDs and Secrets:
+Insert the following content into **/config/application.yml** and paste in your created App IDs and Secrets:
 ```
 facebook_app_id: "{FacebookAppID}"
 facebook_app_secret: "{FacebookAppSecret}"
@@ -63,7 +73,7 @@ google_app_secret: "{GoogleAppSecret}"
 Currently name and email are used for generating users.
 If you need more user data, check the Facebook documentation at:  https://developers.facebook.com/docs/graph-api/reference/user/
 
-
+### Remove OAuth
 
 If you want to remove OAuth support, you have to modify just a few files:
 **config/initializers/devise.rb**
