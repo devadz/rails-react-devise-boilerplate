@@ -36,6 +36,53 @@ rake db:migrate
 
 ---
 
+## Configure OAuth
+
+With OAuth you can allow users to sign up with their social accounts.
+Out of the box this boilerplate supports:
+- Facebook
+- Google+
+
+To use this, you'll have to create an App first, here are good tutorials:
+[Create Facebook App](https://developers.facebook.com/docs/apps/register#create-app)
+[Create Google+ App](http://wpweb.co.in/documents/social-network-integration/google/)
+
+
+#### Create config file
+
+To use OAuth you have to add ID and Secret for each app to **/config/application.yml**.
+Create that file with the following content and paste in your created App IDs and Secrets:
+```
+facebook_app_id: "{FacebookAppID}"
+facebook_app_secret: "{FacebookAppSecret}"
+
+google_app_id: "{GoogleAppID}"
+google_app_secret: "{GoogleAppSecret}"
+```
+
+Currently name and email are used for generating users.
+If you need more user data, check the Facebook documentation at:  https://developers.facebook.com/docs/graph-api/reference/user/
+
+
+
+If you want to remove OAuth support, you have to modify just a few files:
+**config/initializers/devise.rb**
+Comment out this lines:
+```
+config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"], scope: 'email', info_fields: 'email, name'
+
+config.omniauth :google_oauth2, ENV["google_app_id"], ENV["google_app_secret"], :strategy_class => OmniAuth::Strategies::GoogleOauth2, skip_jwt: "true"
+```
+
+Just remove one line from the login links from these files: **app/views/devise/sessions/new.html.erb** and **app/views/devise/registrations/new.html.erb**
+```
+<%= render "devise/_social" %>
+```
+
+And that's it!
+
+---
+
 ## Start server
 ```
 rails s
