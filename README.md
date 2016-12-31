@@ -7,11 +7,12 @@ This is a basic boilerplate for a Rails project with user registration.
 * Ruby on Rails (4.2.4)
 * PostgreSQL database
 * RSpec testing framework
+* React for Rails
 * Twitter bootstrap SCSS framework (v3.3.7)
 * Font awesome (4.7.0)
 * Devise gem for user registration
-* React for Rails
 * Carrierwave and MiniMagick for User avatar
+* OAuth for Login with Facebook and Google+
 
 
 ## Installation
