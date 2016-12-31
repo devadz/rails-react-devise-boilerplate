@@ -21,6 +21,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.8.0'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-oauth2', '~> 1.3.1'
+gem "figaro"
 
 group :development, :test do
   gem 'byebug'
