@@ -13,6 +13,7 @@ This is a basic boilerplate for a Rails project with user registration.
 * Devise gem for user registration
 * Carrierwave and MiniMagick for User avatar
 * OAuth for Login with Facebook and Google+
+* Toastr gem for flash messages
 
 
 ## Installation
