@@ -20,19 +20,22 @@
 
 ---
 
-## Migrate database
-
-Run database migration in console:
-```
-rake db:migrate
-```
-
----
-
 ## Configuration
 
 With Figaro gem configuration is very comfortable.
-First create a new YAML file: **/config/application.yml**
+First two new YAML files:
+**/config/application.yml**
+
+### Configure Secret keys
+
+Devise needs a secret key, that has to be generated first. In Terminal, run:
+```
+bundle exec rake secret
+```
+which will return a unique secret key. Copy the key and paste it into **/config/application.yml**
+```
+devise_secret_key: "{Generated_secret_key}"
+```
 
 ### Configure Mailing
 
@@ -85,6 +88,16 @@ Just remove one line from the login links from these files: **app/views/devise/s
 And that's it!
 
 ---
+
+## Migrate database
+
+Run database migration in console:
+```
+rake db:migrate
+```
+
+---
+
 
 ## Start server
 ```
