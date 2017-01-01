@@ -45,4 +45,5 @@ group :test do
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'faker', '~> 1.6.1'
   gem 'launchy', '~> 2.4.3'
+  gem 'selenium-webdriver', '~> 3.0'
 end

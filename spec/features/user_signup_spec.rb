@@ -13,7 +13,7 @@ RSpec.describe "User singing up" do
   end
 
 
-  scenario "unsuccessfully" do
+  scenario "unsuccessfully", :js => true do
     visit new_user_registration_path
     fill_in "Username", with: "exampleuser"
     fill_in "Email", with: "example@gmail.com"
@@ -21,7 +21,9 @@ RSpec.describe "User singing up" do
     fill_in "Password confirmation", with: ""
     click_on "Sign up"
 
-    expect(page).to have_content "error"
+    within(".alert") do
+      expect(page).to have_text('blank')
+    end
   end
 
 end
