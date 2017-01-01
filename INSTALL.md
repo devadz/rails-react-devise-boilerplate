@@ -23,12 +23,12 @@
 ## Configuration
 
 With Figaro gem configuration is very comfortable.
-First two new YAML files:
-**/config/application.yml**
+First, create a new YAML file: **/config/application.yml**
 
 ### Configure Secret keys
 
-Devise needs a secret key, that has to be generated first. In Terminal, run:
+Devise gem needs a secret key, that has to be generated first.
+In Terminal, run:
 ```
 bundle exec rake secret
 ```
